@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NHRP Operations Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=revised1" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+  <section id="loginView" class="login-shell hidden">
+    <div class="login-card">
+      <div class="login-brand">
+        <img src="assets/nhrp-logo.png" alt="NHRP" />
+        <div><div class="brand-code">NHRP</div><div class="ops-label">OPERATIONS HUB</div></div>
+      </div>
+      <h1>Command Center</h1>
+      <p class="muted">Secure New Horizons Role Play management database.</p>
+      <button id="discordLoginBtn" class="btn primary wide" type="button">Continue with Discord</button>
+      <p class="login-note">Only approved Discord accounts can enter.</p>
+      <p id="loginError" class="error-text"></p>
+    </div>
+  </section>
+
+  <section id="pendingView" class="login-shell hidden">
+    <div class="login-card">
+      <div class="brand-code">NHRP</div>
+      <h1>Access Pending</h1>
+      <p class="muted">Your Discord account signed in successfully, but access has not been approved yet.</p>
+      <div class="pending-id"><span>Discord ID</span><strong id="pendingDiscordId">—</strong></div>
+      <button id="pendingLogoutBtn" class="btn ghost" type="button">Sign Out</button>
+    </div>
+  </section>
+
+  <div id="appView" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo-row"><img src="assets/nhrp-logo.png" alt="NHRP" /><strong>NHRP</strong></div>
+        <div class="brand-title">NEW HORIZONS</div>
+        <div class="ops-label">OPERATIONS HUB</div>
+        <div class="online-pill"><span></span> ONLINE</div>
+      </div>
+
+      <nav id="nav" class="nav-scroll">
+        <div class="nav-group-title">OPERATIONS</div>
+        <button data-page="dashboard" class="nav-item active"><span class="nav-icon">◇</span>Dashboard</button>
+        <button data-page="todo" class="nav-item"><span class="nav-icon">✓</span>Admin To-Do</button>
+
+        <div class="nav-group-title">RECORDS</div>
+        <button data-page="payments" class="nav-item"><span class="nav-icon">$</span>Payment Logs</button>
+        <button data-page="businesses" class="nav-item"><span class="nav-icon">▦</span>Business Owners</button>
+        <button data-page="oneofones" class="nav-item"><span class="nav-icon">◆</span>1 of 1 Add-Ins</button>
+        <button data-page="housing" class="nav-item"><span class="nav-icon">⌂</span>Housing</button>
+        <button data-page="factions" class="nav-item"><span class="nav-icon">⚑</span>Factions</button>
+        <button data-page="bans" class="nav-item"><span class="nav-icon">!</span>Ban Logs</button>
+        <button data-page="spawncodes" class="nav-item"><span class="nav-icon">⌘</span>Spawn Codes</button>
+        <button data-page="f9" class="nav-item"><span class="nav-icon">◉</span>F9</button>
+
+        <div class="nav-group-title">SERVER</div>
+        <button data-page="training" class="nav-item"><span class="nav-icon">△</span>Staff Training</button>
+        <button data-page="staff" class="nav-item"><span class="nav-icon">◎</span>Staff Management</button>
+        <button data-page="reports" class="nav-item"><span class="nav-icon">▥</span>Reports</button>
+
+        <div class="nav-group-title owner-only">SYSTEM</div>
+        <button data-page="backup" class="nav-item owner-only"><span class="nav-icon">⇩</span>Backup / Restore</button>
+        <button data-page="users" class="nav-item owner-only"><span class="nav-icon">♙</span>Users</button>
+        <button data-page="audit" class="nav-item owner-only"><span class="nav-icon">≡</span>Audit Log</button>
+        <button data-page="settings" class="nav-item owner-only"><span class="nav-icon">⚙</span>Settings</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="auth-label"><span></span> AUTHENTICATED USER</div>
+        <div class="user-card">
+          <strong id="userName">—</strong>
+          <span id="userRole">—</span>
+          <small id="userDiscord">—</small>
+        </div>
+        <button id="logoutBtn" class="disconnect-btn">⏻ &nbsp; DISCONNECT</button>
+        <div class="network-row"><span>NHRP NETWORK</span><b>● ONLINE</b></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 id="pageTitle">Dashboard</h1>
+          <p id="pageSubtitle">New Horizons Role Play management overview</p>
+        </div>
+        <div class="top-actions">
+          <input id="globalSearch" class="input search" placeholder="Search NHRP..." />
+        </div>
+      </header>
+      <section id="content"></section>
+      <footer class="app-footer"><span>NHRP MANAGEMENT NETWORK</span><span>SECURE • MANAGE • GROW</span><span>ONLINE</span></footer>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <button id="modalClose" class="modal-close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js?v=revised1"></script>
+</body>
+</html>
