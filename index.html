@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=revised1" />
+  <link rel="stylesheet" href="styles.css?v=20260926-tcodes-categories" />
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="config.js"></script>
 </head>
@@ -17,7 +17,7 @@
   <section id="loginView" class="login-shell hidden">
     <div class="login-card">
       <div class="login-brand">
-        <img src="assets/nhrp-logo.png" alt="NHRP" />
+        <img src="nhrp-logo.png" alt="NHRP" />
         <div><div class="brand-code">NHRP</div><div class="ops-label">OPERATIONS HUB</div></div>
       </div>
       <h1>Command Center</h1>
@@ -41,7 +41,7 @@
   <div id="appView" class="app-shell hidden">
     <aside class="sidebar">
       <div class="sidebar-brand">
-        <div class="logo-row"><img src="assets/nhrp-logo.png" alt="NHRP" /><strong>NHRP</strong></div>
+        <div class="logo-row"><img src="nhrp-logo.png" alt="NHRP" /><strong>NHRP</strong></div>
         <div class="brand-title">NEW HORIZONS</div>
         <div class="ops-label">OPERATIONS HUB</div>
         <div class="online-pill"><span></span> ONLINE</div>
@@ -60,18 +60,18 @@
         <button data-page="factions" class="nav-item"><span class="nav-icon">⚑</span>Factions</button>
         <button data-page="bans" class="nav-item"><span class="nav-icon">!</span>Ban Logs</button>
         <button data-page="spawncodes" class="nav-item"><span class="nav-icon">⌘</span>Spawn Codes</button>
+        <button data-page="tcodes" class="nav-item"><span class="nav-icon">T</span>T/Codes</button>
         <button data-page="f9" class="nav-item"><span class="nav-icon">◉</span>F9</button>
 
         <div class="nav-group-title">SERVER</div>
         <button data-page="training" class="nav-item"><span class="nav-icon">△</span>Staff Training</button>
         <button data-page="staff" class="nav-item"><span class="nav-icon">◎</span>Staff Management</button>
-        <button data-page="reports" class="nav-item"><span class="nav-icon">▥</span>Reports</button>
 
-        <div class="nav-group-title owner-only">SYSTEM</div>
-        <button data-page="backup" class="nav-item owner-only"><span class="nav-icon">⇩</span>Backup / Restore</button>
-        <button data-page="users" class="nav-item owner-only"><span class="nav-icon">♙</span>Users</button>
-        <button data-page="audit" class="nav-item owner-only"><span class="nav-icon">≡</span>Audit Log</button>
-        <button data-page="settings" class="nav-item owner-only"><span class="nav-icon">⚙</span>Settings</button>
+        <div class="nav-group-title owner-only hidden">SYSTEM</div>
+        <button data-page="backup" class="nav-item owner-only hidden"><span class="nav-icon">⇩</span>Backup / Restore</button>
+        <button data-page="users" class="nav-item owner-only hidden"><span class="nav-icon">♙</span>Users</button>
+        <button data-page="audit" class="nav-item owner-only hidden"><span class="nav-icon">≡</span>Audit Log</button>
+        <button data-page="settings" class="nav-item owner-only hidden"><span class="nav-icon">⚙</span>Settings</button>
       </nav>
 
       <div class="sidebar-footer">
@@ -108,6 +108,6 @@
     </div>
   </div>
 
-  <script src="app.js?v=revised1"></script>
+  <script src="app.js?v=20260926-tcodes-categories"></script>
 </body>
 </html>

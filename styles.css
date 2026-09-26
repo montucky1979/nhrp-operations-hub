@@ -35,3 +35,11 @@
 .copy-btn{appearance:none;border:1px solid rgba(74,255,70,.55);background:rgba(17,56,20,.55);color:#aaff9f;border-radius:7px;padding:4px 8px;font:inherit;font-size:11px;font-weight:800;line-height:1;cursor:pointer;white-space:nowrap;transition:.15s ease;}
 .copy-btn:hover{background:rgba(55,180,47,.28);border-color:#53ff46;color:#fff;box-shadow:0 0 10px rgba(83,255,70,.18);}
 .copy-btn:active{transform:translateY(1px);}
+
+
+/* 2026-09-26: paste screenshots + editable category manager */
+.screenshot-drop:focus{outline:2px solid rgba(66,255,79,.35);outline-offset:2px}
+.screenshot-drop-copy b{font-size:14px}
+.category-add{display:flex;gap:10px;align-items:center;margin:14px 0}.category-add input{flex:1}
+.category-list{display:grid;gap:8px;margin:12px 0}.category-row{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid var(--line);background:#041007;padding:10px 12px}.category-row strong{color:#dfffe1}
+@media (max-width:700px){.category-add{align-items:stretch;flex-direction:column}}
