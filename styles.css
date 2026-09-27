@@ -22,8 +22,8 @@
 
 
 /* Screenshot drag/drop uploader */
-.screenshot-drop{border:1px dashed #2b7f2f;background:rgba(7,24,11,.72);border-radius:10px;padding:16px;min-height:130px;display:grid;gap:10px;place-items:center;text-align:center;cursor:pointer;transition:.18s ease;position:relative}
-.screenshot-drop:hover,.screenshot-drop.dragging{border-color:#42ff4f;box-shadow:0 0 0 2px rgba(66,255,79,.10) inset;background:rgba(10,38,16,.9)}
+.screenshot-drop{border:1px dashed #2b7f2f;background:rgba(7,24,11,.72);border-radius:10px;padding:16px;min-height:130px;display:grid;gap:10px;place-items:center;text-align:center;cursor:default;transition:.18s ease;position:relative}
+.screenshot-drop:hover,.screenshot-drop.dragging,.screenshot-drop.paste-ready{border-color:#42ff4f;box-shadow:0 0 0 2px rgba(66,255,79,.16) inset,0 0 18px rgba(66,255,79,.08);background:rgba(10,38,16,.9)}
 .screenshot-drop-copy{display:grid;gap:3px;color:#d9e7dc}.screenshot-drop-copy b{color:#6dff75}.screenshot-drop-copy span{font-size:12px;color:#7f9985}
 .screenshot-preview{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}.screenshot-preview:empty{display:none}
 .screenshot-preview img,.detail-screenshot img{max-width:260px;max-height:160px;object-fit:contain;border:1px solid #1f5c27;border-radius:8px;background:#050a06}
@@ -43,3 +43,10 @@
 .category-add{display:flex;gap:10px;align-items:center;margin:14px 0}.category-add input{flex:1}
 .category-list{display:grid;gap:8px;margin:12px 0}.category-row{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid var(--line);background:#041007;padding:10px 12px}.category-row strong{color:#dfffe1}
 @media (max-width:700px){.category-add{align-items:stretch;flex-direction:column}}
+
+/* Coin Collection */
+.coin-stats{margin-bottom:18px}
+.coin-check{display:inline-flex;align-items:center;gap:9px;cursor:pointer;white-space:nowrap}
+.coin-check input{width:18px;height:18px;accent-color:#50ff73;cursor:pointer}
+.coin-check input:disabled{cursor:not-allowed;opacity:.65}
+.coin-check span{font-size:12px;color:var(--muted)}
